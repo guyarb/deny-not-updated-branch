@@ -1,11 +1,14 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'Deny not updated branch'
+description: 'A github action to fail a PR workflow if the branch is not up to date with the traget branch.'
+author: 'Guy Arbitman'
 inputs:
-  milliseconds: # change this
-    required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+  token:
+    description: The GitHub token used to create an authenticated client
+    default: ${{ github.token }}
+    required: false
 runs:
   using: 'node12'
   main: 'dist/index.js'
+branding:
+  icon: "check"
+  color: "green"
