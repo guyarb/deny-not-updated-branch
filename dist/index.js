@@ -1428,7 +1428,7 @@ const github_1 = __webpack_require__(438);
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const token = core.getInput('github-token', { required: true });
+            const token = core.getInput('token', { required: true });
             const github = github_1.getOctokit(token, {});
             if (github_1.context.eventName !== 'pull_request') {
                 core.info('Action is available only for pull request.');
