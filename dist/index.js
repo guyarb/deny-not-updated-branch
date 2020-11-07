@@ -1441,6 +1441,7 @@ function run() {
             });
             if (['behind', 'dirty'].includes(state.data.mergeable_state)) {
                 core.setFailed('You are not up to date');
+                return;
             }
             core.info('Branch is up to date');
         }
