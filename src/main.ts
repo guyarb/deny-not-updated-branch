@@ -10,13 +10,16 @@ async function run(): Promise<void> {
       core.info('Action is available only for pull request.')
       return
     }
+
     const state = await github.pulls.get({
       pull_number: context.issue.number,
       owner: context.repo.owner,
       repo: context.repo.repo
     })
+
     if (['behind', 'dirty'].includes(state.data.mergeable_state)) {
       core.setFailed('You are not up to date')
+      return
     }
     core.info('Branch is up to date')
   } catch (error) {
