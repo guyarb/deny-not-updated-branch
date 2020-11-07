@@ -1,6 +1,4 @@
-<p align="center">
-  <a href="https://github.com/actions/typescript-action/actions"><img alt="typescript-action status" src="https://github.com/actions/typescript-action/workflows/build-test/badge.svg"></a>
-</p>
+![build-test](https://github.com/guyarb/deny-not-updated-branch/workflows/build-test/badge.svg)
 
 # deny-not-updated-branch
 A github action fails a workflow if the branch is not up to date with the target branch.
