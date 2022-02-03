@@ -23,7 +23,7 @@ async function run(): Promise<void> {
     }
     core.info('Branch is up to date')
   } catch (error) {
-    core.setFailed(error.message)
+    core.setFailed((error as Error).message)
   }
 }
 
