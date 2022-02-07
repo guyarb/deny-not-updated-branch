@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: technote-space/auto-cancel-redundant-workflow@v1
 
-      - uses: guyarb/deny-not-updated-branch@v1.0.0
+      - uses: guyarb/deny-not-updated-branch@v1.1.0
 
       - uses: actions/checkout@v2
 
