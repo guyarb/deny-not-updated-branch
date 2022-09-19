@@ -6,8 +6,8 @@ async function run(): Promise<void> {
     const token: string = core.getInput('token', {required: true})
     const github = getOctokit(token, {})
 
-    if (context.eventName !== 'pull_request') {
-      core.info('Action is available only for pull request.')
+    if (context.eventName !== 'pull_request' || context.eventName !== 'pull_request_target' ) {
+      core.info('Action is available only for pull request or pull_request_target.')
       return
     }
 
